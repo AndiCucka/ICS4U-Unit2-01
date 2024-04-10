@@ -1,31 +1,50 @@
 /*
- * This is a program that calculates the area of a circle.
+ * This is the standard Main.java starting point.
  *
  * @author  Andi Cucka
  * @version 1.0
- * @since   2024-01-01
+ * @since   2024-03-27
  */
 
-import { CarStack } from './CarStack.java';
+/**
+ * This is the Main program.
+ */
+final class Main {
+    /**
+     * Prevent instantiation.
+     * Throw an exception IllegalStateException.
+     * if this ever is called.
+     *
+     * @throws IllegalStateException if instantiation is attempted
+     */
+    private Main() {
+        throw new IllegalStateException("Cannot be instantiated");
+    }
 
-let fruits = new CarStack();
-fruits.push("apple");
-fruits.push("banana");
-console.log("fruits: " + fruits.show());
+    /**
+     * The starting main() function.
+     *
+     * @param args No args will be used
+     */
+    public static void main(String[] args) {
+        final CarStack fruits = new CarStack();
+        fruits.push("apple");
+        fruits.push("banana");
+        fruits.push("cherry");
+        System.out.println("fruits: " + fruits.showStack());
 
+        final CarStack colours = new CarStack();
+        colours.push("red");
+        colours.push("green");
+        colours.push("blue");
+        System.out.println("colours: " + colours.showStack());
 
-let colours = new CarStack();
-colours.push("red");
-colours.push("green");
-colours.push("blue");
-console.log("colours: " + colours.show());
+        final CarStack cars = new CarStack();
+        cars.push("square");
+        cars.push("triangle");
+        cars.push("circle");
+        System.out.println("cars: " + cars.showStack());
 
-let cars = new CarStack();
-cars.push("");
-cars.push("1999 Toyota Supra A80 MkIV");
-cars.push("2002 Nissan Skyline GTR R34 ");
-cars.push("1992 Mazda Rx7 FD");
-cars.push("1680 Farffler Tricycle 6 Speed Fuel injection Turbocharged Custom Widebody");
-console.log("cars: " + cars.show());
-
-console.log("\nDone.");
+        System.out.println("\nDone.");
+    }
+}
