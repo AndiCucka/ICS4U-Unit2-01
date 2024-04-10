@@ -6,7 +6,7 @@
  * @since   2024-01-01
  */
 
-import { CarStack } from './car-stack.js';
+import { CarStack } from './CarStack.java';
 
 let fruits = new CarStack();
 fruits.push("apple");
